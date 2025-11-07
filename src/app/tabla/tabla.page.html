@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Eventos Registrados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-grid>
+<ion-row>
+<ion-col>Fecha</ion-col>
+<ion-col>Titutlo</ion-col>
+<ion-col>Descripcion</ion-col>
+</ion-row>
+<ion-row *ngFor="let item of formularioData">
+<ion-col>{{item.fecha}}</ion-col>
+<ion-col>{{item.titulo}}</ion-col>
+<ion-col>{{item.descripcion}}</ion-col>
+</ion-row>
+
+ </ion-grid>
+</ion-content>
